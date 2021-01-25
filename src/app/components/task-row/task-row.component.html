@@ -1,0 +1,20 @@
+<!-- <<p>
+  task-row works!
+</p>>
+ -->
+
+ <div class="host" #container>
+   <div class="icon-row">
+     <ion-icon name="archive"></ion-icon>
+   </div>
+
+   <ion-item #itemref>
+     <!-- Following adds colouring to the task names based on the priority selected -->
+     <ion-label [attr.style]="sanitiser.bypassSecurityTrustStyle('--color:' + getTaskColor())">
+       {{ task.name }}
+       <p>{{ task.due | customDate }}</p>
+       <!-- <p>{{ task.due | date }}</p> -->
+     </ion-label>
+     <ion-reorder slot="end"></ion-reorder>
+   </ion-item>
+ </div>
