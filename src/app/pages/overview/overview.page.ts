@@ -22,6 +22,7 @@ export class OverviewPage implements OnInit {
     name: '',
     project: 0,
     due: new Date().toISOString(),
+    done: false,
     priority: 4
   }
 

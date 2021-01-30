@@ -13,6 +13,7 @@
      <ion-label [attr.style]="sanitiser.bypassSecurityTrustStyle('--color:' + getTaskColor())">
        {{ task.name }}
        <p>{{ task.due | customDate }}</p>
+       <p>{{ task.done | customComplete }}</p>
        <!-- <p>{{ task.due | date }}</p> -->
      </ion-label>
      <ion-reorder slot="end"></ion-reorder>

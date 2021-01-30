@@ -153,6 +153,7 @@ export class DataService {
   async removeTask(id) {
     let tasksArray: Task[] = await this.getTasksAsArray();
     tasksArray = tasksArray.filter(t => t.id != id);
+    tasksArray.find(id).done = true;
     return Storage.set({ key: TASK_KEY, value: JSON.stringify(tasksArray) });
   }
 
